@@ -9,9 +9,9 @@ namespace Greater.Controllers
     {
         private IGreater<Hello> _greater;
 
-        public HelloController()
+        public HelloController(IGreater<Hello> greater)
         {
-            _greater = new Greater<Hello>();
+            _greater = greater;
         }
         [Route("Hello")]
         public string Get()
