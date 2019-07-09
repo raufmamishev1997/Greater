@@ -162,9 +162,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Greater\HelloGreater.cs" />
-    <Compile Include="Greater\HiGreater.cs" />
-    <Compile Include="Greater\Interface\IGreater.cs" />
+    <Compile Include="Greater\Greater.cs" />
+    <Compile Include="Greater\Interfaces\IGreater.cs" />
+    <Compile Include="Models\Hello.cs" />
+    <Compile Include="Models\Hi.cs" />
+    <Compile Include="Models\Interfaces\IGreeting.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -220,7 +222,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

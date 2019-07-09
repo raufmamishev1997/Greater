@@ -1,11 +1,22 @@
-﻿using System.Web.Http;
+﻿using Greater.Greater;
+using Greater.Greater.Interfaces;
+using Greater.Models;
+using System.Web.Http;
 
 namespace Greater.Controllers
 {
     public class HelloController : ApiController
-    {        public string Get()
+    {
+        private IGreater<Hello> _greater;
+
+        public HelloController()
         {
-            return null;
+            _greater = new Greater<Hello>();
+        }
+        [Route("Hello")]
+        public string Get()
+        {
+            return _greater.SayHello();
         }
     }
 }
